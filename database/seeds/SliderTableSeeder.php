@@ -48,30 +48,6 @@ class SliderTableSeeder extends Seeder
                 'status'      => 1,
             ],
 
-            [
-                'parent_id'   => 2,
-                'key'         => null,
-                'url'         => 'user/slider/slider',
-                'name'        => 'Slider',
-                'description' => null,
-                'icon'        => 'icon-book-open',
-                'target'      => null,
-                'order'       => 190,
-                'status'      => 1,
-            ],
-
-            [
-                'parent_id'   => 3,
-                'key'         => null,
-                'url'         => 'slider',
-                'name'        => 'Slider',
-                'description' => null,
-                'icon'        => null,
-                'target'      => null,
-                'order'       => 190,
-                'status'      => 1,
-            ],
-
         ]);
 
         DB::table('settings')->insert([
