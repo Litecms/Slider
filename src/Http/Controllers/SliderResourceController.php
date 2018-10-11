@@ -48,7 +48,7 @@ class SliderResourceController extends BaseController
 
         $sliders = $this->repository->paginate();
 
-        return $this->response->title(trans('slider::slider.names'))
+        return $this->response->setMetaTitle(trans('slider::slider.names'))
             ->view('slider::slider.index', true)
             ->data(compact('sliders'))
             ->output();
@@ -71,7 +71,7 @@ class SliderResourceController extends BaseController
             $view = 'slider::slider.new';
         }
 
-        return $this->response->title(trans('app.view') . ' ' . trans('slider::slider.name'))
+        return $this->response->setMetaTitle(trans('app.view') . ' ' . trans('slider::slider.name'))
             ->data(compact('slider'))
             ->view($view, true)
             ->output();
@@ -88,7 +88,7 @@ class SliderResourceController extends BaseController
     {
 
         $slider = $this->repository->newInstance([]);
-        return $this->response->title(trans('app.new') . ' ' . trans('slider::slider.name')) 
+        return $this->response->setMetaTitle(trans('app.new') . ' ' . trans('slider::slider.name')) 
             ->view('slider::slider.create', true) 
             ->data(compact('slider'))
             ->output();
@@ -134,7 +134,7 @@ class SliderResourceController extends BaseController
      */
     public function edit(SliderRequest $request, Slider $slider)
     {
-        return $this->response->title(trans('app.edit') . ' ' . trans('slider::slider.name'))
+        return $this->response->setMetaTitle(trans('app.edit') . ' ' . trans('slider::slider.name'))
             ->view('slider::slider.edit', true)
             ->data(compact('slider'))
             ->output();

@@ -9,8 +9,8 @@ class SliderTableSeeder extends Seeder
 {
     public function run()
     {
-        DB::tableconfig('litecms.slider.slider.model.table'))->insert([
-            
+        DB::table(config('litecms.slider.slider.model.table'))->insert([
+
         ]);
 
         DB::table('permissions')->insert([

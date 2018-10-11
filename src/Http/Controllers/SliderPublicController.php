@@ -38,7 +38,7 @@ class SliderPublicController extends BaseController
         })->paginate();
 
 
-        return $this->response->title(trans('slider::slider.names'))
+        return $this->response->setMetaTitle(trans('slider::slider.names'))
             ->view('slider::public.slider.index')
             ->data(compact('sliders'))
             ->output();
@@ -60,7 +60,7 @@ class SliderPublicController extends BaseController
         })->paginate();
 
 
-        return $this->response->title(trans('slider::slider.names'))
+        return $this->response->setMetaTitle(trans('slider::slider.names'))
             ->view('slider::public.slider.index')
             ->data(compact('sliders'))
             ->output();
@@ -80,7 +80,7 @@ class SliderPublicController extends BaseController
                          ->where('slug', $slug);
         })->first(['*']);
 
-        return $this->response->title(trans('slider::slider.name'))
+        return $this->response->setMetaTitle(trans('slider::slider.name'))
             ->view('slider::public.slider.show')
             ->data(compact('slider'))
             ->output();
