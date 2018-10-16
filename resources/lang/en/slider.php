@@ -43,8 +43,8 @@ return [
         'user_id'                    => 'Please enter user id',
         'user_type'                  => 'Please enter user type',
         'name'                       => 'Please enter name',
-        'title1'                     => 'Please enter title1',
-        'title2'                     => 'Please enter title2',
+        'heading'                     => 'Please enter heading',
+        'subheading'                     => 'Please enter subheading',
         'title3'                     => 'Please enter title3',
         'slug'                       => 'Please enter slug',
         'images'                     => 'Please add images',
@@ -63,8 +63,8 @@ return [
         'user_id'                    => 'User id',
         'user_type'                  => 'User type',
         'name'                       => 'Name',
-        'title1'                     => 'Title1',
-        'title2'                     => 'Title2',
+        'heading'                    => 'Heading',
+        'subheading'                 => 'Subheading',
         'title3'                     => 'Title3',
         'slug'                       => 'Slug',
         'images'                     => 'Images',
@@ -80,7 +80,7 @@ return [
      */
     'cloumns'         => [
         'name'                       => ['name' => 'Name', 'data-column' => 1, 'checked'],
-        'title1'                     => ['name' => 'Title', 'data-column' => 2, 'checked'],
+        'heading'                     => ['name' => 'Heading', 'data-column' => 2, 'checked'],
         'status'                     => ['name' => 'Status', 'data-column' => 3, 'checked'],
     ],
 

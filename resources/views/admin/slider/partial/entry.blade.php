@@ -4,17 +4,23 @@
                        -> label(trans('slider::slider.label.name'))
                        -> placeholder(trans('slider::slider.placeholder.name'))!!}
                 </div>
-
                 <div class='col-md-4 col-sm-6'>
-                       {!! Form::text('title1')
-                       -> label(trans('slider::slider.label.title1'))
-                       -> placeholder(trans('slider::slider.placeholder.title1'))!!}
+                       {!! Form::text('slug')
+                       -> label(trans('slider::slider.label.slug'))
+                       -> placeholder(trans('slider::slider.placeholder.slug'))!!}
+                </div>
+              </div>
+              <div class='row'>
+                <div class='col-md-4 col-sm-6'>
+                       {!! Form::text('heading')
+                       -> label(trans('slider::slider.label.heading'))
+                       -> placeholder(trans('slider::slider.placeholder.heading'))!!}
                 </div>
 
                 <div class='col-md-4 col-sm-6'>
-                       {!! Form::text('title2')
-                       -> label(trans('slider::slider.label.title2'))
-                       -> placeholder(trans('slider::slider.placeholder.title2'))!!}
+                       {!! Form::text('subheading')
+                       -> label(trans('slider::slider.label.subheading'))
+                       -> placeholder(trans('slider::slider.placeholder.subheading'))!!}
                 </div>
 
                 <div class='col-md-4 col-sm-6'>
@@ -29,7 +35,7 @@
                         <label for="images" class="control-label col-lg-12 col-sm-12 text-left">
                          {{trans('slider::slider.label.images') }}
                          </label>
-                        <div class='col-lg-3 col-sm-12'>
+                        <div class='col-lg-12 col-sm-12'>
                             {!! $slider->files('images', 10)
                             ->mime(config('filer.image_extensions'))
                             ->url($slider->getUploadUrl('images'))

@@ -17,8 +17,6 @@
         <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
                     <li class="{!!(request('status') == '')?'active':'';!!}"><a href="{!!guard_url('slider/slider')!!}">{!! trans('slider::slider.names') !!}</a></li>
-                    <li class="{!!(request('status') == 'archive')?'active':'';!!}"><a href="{!!guard_url('slider/slider?status=archive')!!}">Archived</a></li>
-                    <li class="{!!(request('status') == 'deleted')?'active':'';!!}"><a href="{!!guard_url('slider/slider?status=deleted')!!}">Trashed</a></li>
                     <li class="pull-right">
                     <span class="actions">
                     <!--   
@@ -35,7 +33,7 @@
                     <thead class="list_head">
                         <th style="text-align: right;" width="1%"><a class="btn-reset-filter" href="#Reset" style="display:none; color:#fff;"><i class="fa fa-filter"></i></a> <input type="checkbox" id="slider-slider-check-all"></th>
                         <th data-field="name">{!! trans('slider::slider.label.name')!!}</th>
-                    <th data-field="title1">{!! trans('slider::slider.label.title1')!!}</th>
+                    <th data-field="title1">{!! trans('slider::slider.label.heading')!!}</th>
                     <th data-field="status">{!! trans('slider::slider.label.status')!!}</th>
                     </thead>
                 </table>
@@ -85,7 +83,7 @@ $(document).ready(function(){
         "columns": [
             {data :'id'},
             {data :'name'},
-            {data :'title1'},
+            {data :'heading'},
             {data :'status'},
         ],
         "pageLength": 25

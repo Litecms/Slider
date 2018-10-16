@@ -28,7 +28,7 @@ class Slider
      */
     public function count()
     {
-        return  0;
+        return 0;
     }
 
     /**
@@ -53,4 +53,23 @@ class Slider
 
         return view('slider::' . $view, compact('slider'))->render();
     }
+
+    public function getSlider($slug, $view = '')
+    {
+        $slider = $this->slider->findBySlug($slug);
+
+        if ($view == '') {
+            if (!view()->exists('public.slider.' . $slug))
+            {
+                $view = 'public.slider.sliders';
+            }
+            else
+            {
+                $view = 'public.slider.' . $slug;
+            }
+        }
+        return view('slider::' . $view, compact('slider'))->render();
+
+    }
+
 }

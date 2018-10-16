@@ -85,6 +85,9 @@ class SliderServiceProvider extends ServiceProvider
 
         // Publish language files
         $this->publishes([__DIR__ . '/../../resources/lang' => base_path('resources/lang/vendor/slider')], 'lang');
+        
+        // Publish storage files
+        $this->publishes([__DIR__ . '/../../storage' => base_path('storage')], 'storage');
 
         // Publish public files and assets.
         $this->publishes([__DIR__ . '/public/' => public_path('/')], 'public');

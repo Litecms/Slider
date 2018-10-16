@@ -29,7 +29,7 @@ return [
             'slugs'                 => ['slug' => 'name'],
             'dates'                 => ['deleted_at', 'created_at', 'updated_at'],
             'appends'               => [],
-            'fillable'              => ['id',  'user_id',  'user_type',  'name',  'title1',  'title2',  'title3',  'slug',  'images',  'status',  'upload_folder',  'created_at',  'updated_at',  'deleted_at'],
+            'fillable'              => ['id',  'user_id',  'user_type',  'name',  'heading',  'subheading',  'slug',  'images',  'status',  'upload_folder',  'created_at',  'updated_at',  'deleted_at'],
             'translatables'         => [],
             'upload_folder'         => 'slider/slider',
             'uploads'               => [

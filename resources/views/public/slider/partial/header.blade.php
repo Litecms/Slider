@@ -1,12 +1,9 @@
-<section class="inner-page-title header">
+<section class="title">
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2 text-center">
-        <h1>{!! trans('slider::slider.name') !!}</h1>
-        <form action="{{trans_url('sliders')}}" class="search search-full">
-            <input type="text" class="form-control" name="search[q]" value="" placeholder="Search existing slider">
-            <button class="btn btn-primary" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-        </form>
+         <h1>{!! trans('slider::slider.name') !!}</h1>
+        <p>We are a creative studio focusing on culture, luxury, editorial & art.</p>
       </div>
     </div>
   </div>

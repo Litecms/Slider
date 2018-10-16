@@ -23,9 +23,8 @@ class CreateSlidersTable extends Migration
             $table->integer('user_id')->nullable();
             $table->string('user_type', 25)->nullable();
             $table->string('name', 250)->nullable();
-            $table->string('title1', 250)->nullable();
-            $table->string('title2', 250)->nullable();
-            $table->string('title3', 255)->nullable();
+            $table->string('heading', 250)->nullable();
+            $table->string('subheading', 250)->nullable();
             $table->string('slug', 50)->nullable();
             $table->text('images')->nullable();
             $table->enum('status', ['Show','Hide'])->nullable();
