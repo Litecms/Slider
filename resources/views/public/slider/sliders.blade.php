@@ -4,7 +4,7 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
       @foreach($slider->getImages('images','lg') as $key=> $image)
-      <div class="item active">
+      <div class="item {{$loop->first ? 'active' : ''}}">
         <img src="{!!url($slider->defaultImage('images' ,'original',$key))!!}" alt="...">
         <div class="carousel-caption">
           <h5>{{$slider->images[$key]['title']}}</h5>
@@ -15,7 +15,7 @@
   </div>
 
   <!-- Controls -->
-  
+
   <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
